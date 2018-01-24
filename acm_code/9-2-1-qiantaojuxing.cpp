@@ -15,6 +15,14 @@ int d[maxn];
 int G[maxn][maxn];
 int n;
 
+/*
+ * i contains j is better than j contains j
+ * for i contains j:
+ * in dp the i row is fixed and increase j -->better
+ * for j contains i:
+ * in dp the j column is fixed and increase i -->worse
+ */
+
 void createGraph()
 {
     memset(G, 0, sizeof(G));
