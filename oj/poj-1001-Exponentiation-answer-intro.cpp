@@ -44,7 +44,7 @@ string mulStr(string a, string b)                          //a * b
 
     int bp = handleDecimalPoint(b);
 
-    string ans(a.size()+b.size(), '0');
+    string ans(a.size()+b.size(), '0');                    //初始化全为0
     for (int i = a.size() - 1; i >= 0 ; i--)
     {
         int carry = 0;
@@ -52,14 +52,14 @@ string mulStr(string a, string b)                          //a * b
         for (int j = b.size() - 1; j >= 0 ; j--)
         {
             int bn = b[j] - '0';
-            int sum = an * bn + carry + ans[i+j+1] - '0';
+            int sum = an * bn + carry + ans[i+j+1] - '0';  // 考虑进位总长为 a + b + 1
             carry = sum / 10;
             ans[i+j+1] = sum % 10 + '0';
         }
-        if (carry) ans[i] += carry;
+        if (carry) ans[i] += carry;                        //最高位有进位则为进位数，否则为0，在下面NoDot函数中处理掉0
     }
-    if (ap > 0 || bp > 0) ans.insert(ans.end() - ap - bp, '.');
-    standardizeNumNoDot(ans);
+    if (ap > 0 || bp > 0) ans.insert(ans.end() - ap - bp, '.');  //若a或b为小数点后有位数，则加上小数点，否则不加小数点
+    standardizeNumNoDot(ans);                              //去掉无意义的0
     return ans;
 }
 
