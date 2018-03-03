@@ -30,6 +30,16 @@ void display()
             temp_edge = next[temp_edge];
         }
     }
+
+    cout << "------The better code: ---------------" << endl;
+
+    for(int i = 0 ; i < n; ++i)
+    {
+        for(int e = first[i]; e != -1; e = next[e])
+        {
+            cout << u[e] << "--" << v[e] << "--" << w[e] << "--" << e << endl;
+        }
+    }
 }
 
 int main()
@@ -38,5 +48,15 @@ int main()
     display();
     return 0;
 }
-
+/*
+6 8
+0 2 10
+0 4 30
+0 5 100
+1 2 5
+2 3 50
+3 5 10
+4 3 20
+4 5 60
+*/
 
