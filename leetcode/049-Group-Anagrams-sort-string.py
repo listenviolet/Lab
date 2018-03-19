@@ -6,7 +6,6 @@ class Solution:
         """
         ans, res, ret  = [], {}, []
         for s in strs:
-            print(s)
             temp = list(s)
             temp.sort()
             ans.append("".join(temp))
