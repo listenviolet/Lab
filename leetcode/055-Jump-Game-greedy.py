@@ -9,3 +9,8 @@ class Solution:
             if i + nums[i] >= lastPos:
                 lastPos = i
         return lastPos == 0
+
+# i + nums[i] >= lastPos -> 
+# assure that there is at least one step <= nums[i]
+# that can reach the lastPos
+# so that no need to check each one <= nums[i]
