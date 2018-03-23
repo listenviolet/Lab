@@ -10,7 +10,13 @@ int main()
     while(cin >> word1 >> word2)
     {
         int n = word1.size(), m = word2.size();
-        vector<vector<int> > dp(n + 1, vector<int>(m + 1, 0));
+        vector<vector<int> > dp(n + 1, vector<int>(m + 1, 0)); // Initialize with 0
+        /*
+        for(int i = 0; i < n + 1; ++i)
+            for(int j = 0; j < m + 1; ++j)
+                cout << dp[i][j] << " ";
+        cout << endl;
+        */
         for(int i = 1; i <=n; ++i)
         {
             dp[i][0] = i;
