@@ -14,7 +14,7 @@ class Solution:
             board[i][j] = '*'   # mark visited
             exist = dfs(board, i + 1, j, word, ind + 1) or dfs(board, i, j + 1, word, ind + 1) or dfs(board, i - 1, j, word, ind + 1) or dfs(board, i, j - 1, word, ind + 1)
 
-            board[i][j] = temp  #recover to not visted
+            board[i][j] = temp  # recover to not visited
             return exist
 
 
