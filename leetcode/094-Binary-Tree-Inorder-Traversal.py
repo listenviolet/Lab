@@ -30,14 +30,12 @@ class Solution:
         #print(intree)
         cur = 0
         while(stk or intree[cur] != 0):
-            #print(cur,intree[cur])
             if intree[cur] != 0:
                 stk.append(intree[cur])
             elif intree[cur] == 0:
                 outtree.append(stk[-1])
                 stk.pop()
             cur = cur + 1
-            #print("stk: ", stk)
             
         return outtree
                 
