@@ -66,3 +66,6 @@ class Solution:
 # leftroot.right.val == rightroot.left.val
 # iter(leftroot.left, rightroot.right)
 # iter(leftroot.right, rightroot.left)
+
+# Note:
+# Python在嵌套函数内部访问并父级函数的变量: nonlocal
