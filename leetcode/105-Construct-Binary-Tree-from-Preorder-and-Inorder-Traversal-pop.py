@@ -39,3 +39,4 @@ class Solution:
 # 即根节点将其本身的值作为root.val传给左子树，
 # 根节点值在inorder中pop
 # 之后将根节点父节点的值作为stop传给右子树
+# beats 99.62%
