@@ -36,3 +36,5 @@ class Solution:
 # 依次判断两元素是否连续，若连续temp + 1
 # 若temp长度大于最大连续长度，则更新Max
 # Note: Max与temp均从1开始
+# Beats: 93.73%
+# Hard
