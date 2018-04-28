@@ -34,3 +34,5 @@ class Solution(object):
 # 我们可以在遍历过程中将每个元素都指向head，
 # 这样如果不存在环，就会有空指针，
 # 如果存在环，最终会指向head而结束。
+# Beats: 93.25%
+# easy
