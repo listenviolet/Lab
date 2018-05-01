@@ -29,3 +29,6 @@ class Solution(object):
             node.val = i
             node = node.next
         return head
+
+# Beats: 99.45%
+# medium
