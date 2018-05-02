@@ -12,7 +12,7 @@ class Solution(object):
             cursub = [nums[i], nums[i] * presub[0], nums[i] * presub[1]]
             M = max(M, max(cursub))
             presub = [min(cursub),max(cursub)]
-            cursub = []
+            cursub = []  # 清空数组比不清空快？
         return M
 
 # Beats: 38.50% 
