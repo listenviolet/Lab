@@ -49,12 +49,12 @@ class Solution:
 # Output: 4
 
 # Solution:
-  # ooxx*oo
-  # ooxx*oo
-  # oo***oo
-  # 即square函数中row,col为已探测出的正方形的左上角坐标
-  # 再探测以row,col为顶点的正方形时
-  # 即需要探测*所示位置
+# ooxx*oo
+# ooxx*oo
+# oo***oo
+# 即square函数中row,col为已探测出的正方形的左上角坐标
+# 再探测以row,col为顶点的正方形时
+# 即需要探测*所示位置
                      
 # Beats: 14.88%
 # Runtime: 212ms
