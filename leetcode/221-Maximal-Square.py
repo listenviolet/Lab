@@ -59,5 +59,3 @@ class Solution:
 # Beats: 14.88%
 # Runtime: 212ms
 # medium            
-                        
-                
