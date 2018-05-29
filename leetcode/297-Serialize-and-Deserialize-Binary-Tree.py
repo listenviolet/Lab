@@ -83,6 +83,6 @@ class Codec:
 # 可以在类成员函数中定义，如上Str，这样每次调用都会清零更新
 # 这里deseialize中使用了iter，可以依次获取data中下一个元素
 
-Beats: 97.42%
-Runtime: 175ms
-hard
+# Beats: 97.42%
+# Runtime: 175ms
+# hard
