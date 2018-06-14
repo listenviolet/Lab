@@ -42,6 +42,15 @@ public:
 
 // Solution:
 // http://zxi.mytechroad.com/blog/dynamic-programming/leetcode-416-partition-equal-subset-sum/
+
+// DP:
+// dp[i][j]: whether can sum to j using first i numbers
+// dp[i][j] = true if dp[i - 1][j - num]
+// check dp[n - 1][sum / 2]
+// int d[-1][0] = true
+// Time complexity: O(n^2 * sum) -> O(n * sum)
+// Space complexity: O(sum)
+
 // num  dp[i - 1] == true           dp[i] == true
 // 1    {0}                         {0, 1}
 // 5    {0, 1}                      {0, 5, 6}
