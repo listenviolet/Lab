@@ -75,3 +75,7 @@ class Solution:
 # counts[i - n] 表示正数之和为(i - n)的组合数
 # 即为如果加上当前搜索到的n可以达到i的组合数
 # 也即对counts[i]的更新的部分
+
+# Beats: 99.59%
+# Runtime: 60ms
+# medium
