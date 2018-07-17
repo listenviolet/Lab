@@ -32,20 +32,20 @@ class Solution:
 # The range of numbers in the array is [-1000, 1000] 
 # and the range of the integer k is [-1e7, 1e7].
 
-Solution:
-Keep tracking the prefix sums and their counts using hashmap.
+# Solution:
+# Keep tracking the prefix sums and their counts using hashmap.
 
-s -> count: how many arrays nums[0:j] (j < i) that has sum of s
+# s -> count: how many arrays nums[0:j] (j < i) that has sum of s
 
-s = sum(nums[0:i])
+# s = sum(nums[0:i])
 
-check how many arrays nums[0:j] (j < i) that has sum (s – k)
+# check how many arrays nums[0:j] (j < i) that has sum (s – k)
 
-then there are the same number of arrays nums[j+1: i] that have sum k.
+# then there are the same number of arrays nums[j+1: i] that have sum k.
 
-Time complexity: O(n)
+# Time complexity: O(n)
 
-Space complexity: O(n)
+# Space complexity: O(n)
 
 # Beats: 99.08%
 # Runtime: 56ms
