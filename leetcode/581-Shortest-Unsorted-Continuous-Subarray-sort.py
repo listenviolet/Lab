@@ -45,6 +45,12 @@ class Solution:
 # The subarray lying between them is, 
 # then, the required shorted unsorted subarray.
 
+# Complexity Analysis
+
+# Time complexity : O(nlogn). Sorting takes nlognnlogn time.
+
+# Space complexity : O(n). We are making copy of original array.
+
 # Beats: 26.94%
 # Runtime: 120ms
 # easy
