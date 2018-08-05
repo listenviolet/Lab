@@ -4,25 +4,29 @@ class Solution:
         :type x: int
         :rtype: int
         """
+        if x == 0: return 0
+        rev = 0
         flag = 1
         if x < 0: 
             flag = -1
-            x = -1 * x
+            x *= -1
+        INT_MAX = 2147483647
+        INT_MIN = 2147483648
         
-        nums = []
-        while x > 0:
-            nums.append(x % 10)
-            x = x // 10
-        print(nums)
-        if not nums: return 0
-        i = 0
-        while nums[i] == 0 and i < len(nums):
-            i += 1
-        ans = 0
-        for ind in range(i, len(nums)):
-            ans = ans * 10 + nums[ind]
-            if ans > 2147483647: return 0
-        return flag * ans
+        if flag > 0:
+            while x > 0:
+                pop = x % 10
+                x = x // 10
+                if rev > (INT_MAX // 10) or (rev == INT_MAX // 10 and pop > 7): return 0
+                rev = rev * 10 + pop
+
+        if flag < 0:
+            while x > 0:
+                pop = x % 10
+                x = x // 10  
+                if rev > (INT_MIN // 10) or (rev == INT_MIN // 10 and pop > 8): return 0
+                rev = rev * 10 + pop
+        return flag * rev
 
 # Description:
 # Given a 32-bit signed integer, reverse digits of an integer.
@@ -40,20 +44,27 @@ class Solution:
 # Input: 120
 # Output: 21
 # Note:
-# Assume we are dealing with an environment 
-# which could only store integers within the 32-bit signed integer 
-# range: [−231,  231 − 1]. 
+# Assume we are dealing with an environment which could only store integers 
+# within the 32-bit signed integer range: [−2^31,  2^31 − 1]. 
 # For the purpose of this problem, 
 # assume that your function returns 0 when the reversed integer overflows.
 
 # Solution:
-# 首先用flag标记正负数，之后，取其数字位，转换为list形式
-# 用i标记第一个不是0的位
-# 将list存储的转换为integer
-# Notice:
-# 需要保证integer在32位范围内： [-2147483648,2147483647]
-# 最后，将转换后的integer * 正负符号即可。
+# https://leetcode.com/problems/reverse-integer/solution/
 
-# Beats: 16.48%
-# Runtime: 64ms
+# Notice:
+# 1. python的负数取余运算与c的不同：
+#     C语言向0取整，python向负无穷取整。
+#     (-17) mod 5 =?
+#     答案一： (-17) = (-3)*5 + (-2)，所以余数是 -2 。（C语言）
+#     答案二： (-17) = (-4)*5 + (+3)，所以余数是 +3 。（python）
+
+#     所以自己在写的时候，分了+-两种情况讨论。
+# 2. integer的范围：
+#     [-2147483648, 2147483647]
+#     最后一位一个是8，一个是7
+#     在进行是否越界的判断时，有所不同。
+            
+# Beats: 99.93%
+# Runtime: 52ms
 # easy
