@@ -51,6 +51,7 @@ class Solution:
 
 # Solution:
 # https://leetcode.com/problems/reverse-integer/solution/
+# 每次直接使用pop的值，避免了开数组空间
 
 # Notice:
 # 1. python的负数取余运算与c的不同：
