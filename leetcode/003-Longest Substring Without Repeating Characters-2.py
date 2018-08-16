@@ -51,3 +51,7 @@ class Solution:
 # Note:
 # 因为subs中即为无重复子串，则无需用set, 
 # 可直接通过判断新加入的s[end]是否在subs中，来判断是否有重复字符
+
+# Beats：35.65%
+# Runtime: 124ms
+# medium
